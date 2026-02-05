@@ -1,0 +1,10 @@
+{
+  "browsers": ["chrome"],
+  "screenshots": {
+    "path": "artifacts/screenshots",
+    "takeOnFails": true
+  },
+  "pageLoadTimeout": 10000,
+  "browserStartTimeout": 15000,
+  "ajaxRequestTimeout": 30000
+}

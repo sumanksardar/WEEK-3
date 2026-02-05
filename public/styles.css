@@ -1,0 +1,126 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #ffa07a 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3em;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+}
+
+/* Menu Content */
+.menu-content {
+    padding: 30px;
+    background-color: white;
+}
+
+.menu-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.divider {
+    height: 2px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Menu Item Styles */
+.menu-item {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.item-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    flex: 1;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    margin-left: 15px;
+    font-size: 1.1em;
+}
+
+.item-description {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .menu-content {
+        padding: 20px;
+    }
+
+    .item-price {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .item-header {
+        flex-direction: column;
+    }
+}

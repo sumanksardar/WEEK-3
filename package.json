@@ -1,0 +1,30 @@
+{
+  "name": "cafe-menu-project",
+  "version": "1.0.0",
+  "description": "A cafe menu application with Node.js backend and TestCafe tests",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "testcafe chrome tests/simple.test.js tests/menu.test.js",
+    "test:firefox": "testcafe firefox tests/simple.test.js tests/menu.test.js",
+    "test:headless": "testcafe chrome:headless tests/simple.test.js tests/menu.test.js"
+  },
+  "keywords": [
+    "cafe",
+    "menu",
+    "nodejs",
+    "testcafe"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.22.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "testcafe": "^2.5.0"
+  }
+}
