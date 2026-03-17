@@ -1,133 +1,111 @@
-# Cafe Menu Project
+# Week 3 & Week 4 Git and TestCafe Portfolio
 
-A full-stack cafe menu application built with Node.js backend and TestCafe testing framework.
+## Project Overview
+
+This project demonstrates the use of Git version control and TestCafe functional testing as part of Week 3 and Week 4 coursework.
+
+The repository contains a simple web-based menu application along with automated functional tests that validate the behaviour of the application.
+
+---
+
+## Technologies Used
+
+* Git (version control system)
+* Gogs (self-hosted Git repository)
+* Node.js (backend server)
+* TestCafe (functional testing framework)
+* JavaScript, HTML, CSS
+
+---
+
+## Repository Features
+
+This repository demonstrates the following Git concepts:
+
+* Multiple commits with meaningful commit messages
+* Issue creation and resolution
+* Pull request creation and merging
+* Branching workflow using feature branches
+* Structured and organised project files
+
+---
 
 ## Project Structure
 
 ```
-cafe-menu-project/
-├── backend/
-│   └── server.js           # Node.js Express server
-├── public/
-│   ├── menu.html           # Menu HTML page
-│   └── styles.css          # CSS styling
-├── tests/
-│   ├── menu.test.js        # UI tests for menu
-│   └── api.test.js         # API endpoint tests
-├── package.json            # Project dependencies
-├── .gitignore              # Git ignore rules
-└── README.md               # This file
+WEEK-3/
+├── backend/        # Node.js server
+├── public/         # Frontend menu application
+├── tests/          # TestCafe test files
+├── .gitignore      # Ignores node_modules folder
+├── package.json    # Project dependencies
+└── README.md       # Project documentation
 ```
 
-## Features
+---
 
-- **Frontend**: Responsive café menu with modern styling
-- **Backend**: Node.js Express server with REST API
-- **Testing**: Comprehensive TestCafe test suite
-- **API Endpoint**: `/api/menu` returns menu data in JSON format
-- **Health Check**: `/api/health` endpoint to verify server status
+## TestCafe Functional Testing
 
-## Installation
+Automated functional tests have been implemented using TestCafe.
 
-1. Navigate to the project directory:
-   ```bash
-   cd cafe-menu-project
-   ```
+The following test files are included:
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+* `simple.test.js`
+  Contains basic checks such as page loading, element visibility, and structure validation.
 
-## Running the Application
+* `menu.test.js`
+  Contains more detailed tests validating menu items, prices, and content accuracy.
 
-Start the Node.js server:
-```bash
-npm start
+These tests ensure that the application behaves as expected from a user perspective.
+
+---
+
+## How to Run the Project
+
+### 1. Start Gogs Server
+
+```
+cd ~/gogs
+./gogs web
 ```
 
-The application will be available at `http://localhost:3000`
+---
 
-### Available Endpoints
+### 2. Start Application Server
 
-- **Menu Page**: `http://localhost:3000/`
-- **Menu API**: `http://localhost:3000/api/menu`
-- **Health Check**: `http://localhost:3000/api/health`
-
-## Running Tests
-
-### Chrome Browser Tests
-```bash
-npm test
+```
+cd ~/Desktop/WK-3-4/WEEK-3/backend
+node server.js
 ```
 
-### Firefox Browser Tests
-```bash
-npm run test:firefox
+---
+
+### 3. Run TestCafe Tests
+
+```
+cd ~/Desktop/WK-3-4/WEEK-3
+npx testcafe chromium tests/simple.test.js
 ```
 
-### Headless Chrome Tests
-```bash
-npm run test:headless
-```
+---
 
-## Test Coverage
+## Application URLs
 
-The project includes comprehensive tests covering:
-- Page loading and rendering
-- Menu sections visibility
-- Menu items display
-- Price formatting
-- Item descriptions
-- Opening hours information
-- API endpoints functionality
+* Gogs Repository: http://localhost:3000
+* Menu Application: http://localhost:3001
 
-## Menu Items
+---
 
-### Sandwiches and Wraps
-- Ham and Cheese - £2.95
-- Hummus and Feta - £3.95
-- Egg classic - £1.95
-- Chicken wrap - £1.95
+## Key Learning Outcomes
 
-### Soups
-- Carrot and coriander - £2.50
-- Lentil - £2.50
-- Tomato - £2.50
+* Understanding Git workflows including branching and merging
+* Using Gogs as a local Git server
+* Managing issues and pull requests
+* Writing and executing automated functional tests
+* Validating web application behaviour using TestCafe
 
-## Dependencies
+---
 
-### Production
-- **express**: Web framework for Node.js
-- **cors**: Cross-Origin Resource Sharing middleware
-- **body-parser**: Request body parsing middleware
+## Author
 
-### Development
-- **testcafe**: End-to-end testing framework
-- **nodemon**: Auto-restart server on file changes
-
-## Configuration Files
-
-### .gitignore
-Ignores common unnecessary files:
-- node_modules/
-- npm-debug.log
-- .env files
-- IDE configuration
-- Build artifacts
-- TestCafe artifacts
-
-### package.json
-Contains all project metadata, scripts, and dependencies.
-
-## Development Tips
-
-1. Use `npm start` to run the server
-2. Use `npm test` to run all tests
-3. Tests require the server to be running
-4. Modify menu items in `backend/server.js` to update the API response
-5. Update styling in `public/styles.css`
-
-## License
-
-MIT
+Suman Kumar Sardar
